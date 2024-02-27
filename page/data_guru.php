@@ -44,7 +44,6 @@
                                             <td><?php echo $data['alamat_guru']; ?></td>
                                             <td><?php echo $data['telpon_guru']; ?></td>
                                             <td> 
-                                                
                                                 <?php 
                                                     if ($data['photo'] != null) {
                                                 ?>

@@ -22,8 +22,6 @@
                                             <th>NIS</th>
                                             <th>Nama</th>
                                             <th>TTL</th>
-                                            <th>Gender</th>
-                                            <th>Agama</th>
                                             <th>Alamat</th>
                                             <th>Telp</th>
                                             <th>Email</th>
@@ -42,8 +40,6 @@
                                             <td><?php echo $data['nis']; ?></td>
                                             <td><?php echo $data['nama_siswa']; ?></td>
                                             <td><?php echo $data['tpl']; ?>,<?php echo $data['tgl']; ?></td>
-                                            <td><?php echo $data['kelamin']; ?></td>
-                                            <td><?php echo $data['agama']; ?></td>
                                             <td><?php echo $data['alamat_siswa']; ?></td>
                                             <td><?php echo $data['telpon_siswa']; ?></td>
                                             <td><?php echo $data['email']; ?></td>

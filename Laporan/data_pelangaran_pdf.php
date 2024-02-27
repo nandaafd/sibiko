@@ -1,4 +1,3 @@
-<?php ob_start(); ?>
 <html>
 <head>
 	<title>Cetak PDF</title>
@@ -20,7 +19,7 @@
 <b>LAPORAN DATA PELANGGARAN SISWA</b> <br>
 SMK N 10 SURABAYA</h5>
 <hr border="1px">
-<table border="1">
+<table border="1" style="width:100%;">
 <tr>
 	<th>Nama Siswa</th>
 	<th>Pelanggaran</th>
@@ -65,11 +64,5 @@ NIP.197104032000031004
 </html>
 
 <?php
-$html = ob_get_contents();
-ob_end_clean();
-        
-require_once('html2pdf/html2pdf.class.php');
-$pdf = new HTML2PDF('P','A4','en');
-$pdf->WriteHTML($html);
-$pdf->Output('Data Siswa.pdf', 'D');
+echo "<script>window.print()</script>";
 ?>

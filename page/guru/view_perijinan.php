@@ -15,7 +15,7 @@
         </div>
         <div class="panel-body">
             <div class="table-responsive">
-        	<a href="?page=guru&action=add_perijinan" class="btn btn-info">Tambah Perijinan Baru</a>  <br>
+        	<a href="?page=guru&action=add_perijinan" class="btn btn-danger"><i class="fa fa-edit"></i> Tambah Perijinan Baru</a>  <br>
                 <table class="table table-striped table-hover" id="dataTables-example">
                     <thead>
                          <tr>

@@ -81,7 +81,7 @@ $data = mysqli_fetch_array($sql);
                         <div class="user-section"> 
                         <br>                                                
                         <center>
-                        <img src="../assets/img/logosmk.png" alt="" width="210" class="img-responsive" style="border-radius: 7%;">
+                        <img src="../assets/img/logosmkk.png" alt="" width="150" class="img-responsive" style="border-radius: 7%;">
 
                         </center>  
                         

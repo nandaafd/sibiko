@@ -14,7 +14,7 @@
         <b><i class="fa fa-table"></i> DAFTAR DATA PELANGGARAN </b>
         </div>
         <div class="panel-body">
-        	<a href="?page=guru"><button class="btn btn-info" style="background-color: #42a5f5;">Pelanggar Baru</button></a> <br> <br>
+        	<a href="?page=guru"><button class="btn btn-danger"><i class="fa fa-edit"></i> Pelanggar Baru</button></a> <br> <br>
             <div class="table-responsive">
                 <table class="table table-striped table-hover" id="dataTables-example">
                     <thead>

@@ -25,8 +25,6 @@
                                             <th>Nip</th>
                                             <th>Nama</th>
                                             <th>TTL</th>
-                                            <th>JK</th>
-                                            <th>Agama</th>
                                             <th>Alamat</th>
                                             <th>Telp</th>
                                             <th>Foto</th>
@@ -44,14 +42,11 @@
                                             <td><?php echo $data['nip']; ?></td>
                                             <td><?php echo $data['nama_guru']; ?>, <?php echo $data['gelar']; ?></td>
                                             <td><?php echo $data['tempat_lahir']; ?>,<?php echo $data['tanggal_lahir']; ?></td>
-                                            <td><?php echo $data['kelamin']; ?></td>
-                                            <td><?php echo $data['agama']; ?></td>
                                             <td><?php echo $data['alamat_guru']; ?></td>
                                             <td><?php echo $data['telpon_guru']; ?></td>
-                                            <td> <img src="../photo_guru/<?php echo $data ['photo'];?>" height="40" width="40" align="middle" style="border-radius: 100%;"></td>
-
-                                                
-                                            </td>
+                                            <td>
+                                                <a href="?page=guru&action=detail&kdguru=<?php echo $data['id_guru']; ?> "><button type="" class="btn btn-success"><i class="fa fa-search"></i></button></a>
+                                            </td>           
                                         </tr>
                                         <?php } ?>
                                       

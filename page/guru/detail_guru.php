@@ -7,7 +7,17 @@
 
 
 <?php
-$kdgr = @$_GET['kdguru'];
+if (@$_SESSION['guru']) {
+    if (@$_GET['kdguru']) {
+        $kdgr = @$_GET['kdguru'];
+    }
+    else {
+        $kdgr = @$_SESSION['guru'];
+    }
+}
+else {
+    $kdgr = @$_GET['kdguru'];
+}
 
 $sql_formulir = mysqli_query($mysqli, "select * from data_guru where id_guru = '$kdgr'") or die(mysqli_error($mysqli));
 $data = mysqli_fetch_array($sql_formulir);

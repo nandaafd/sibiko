@@ -531,7 +531,8 @@ $sql2=mysqli_query($mysqli," UPDATE data_saudara SET nm='$nm',
 	agm2='$agm2' WHERE id_saudara = '$kdsis'");
 ?>
 <script>
-alert(" Sukses ! Data berhasil Di Ubah!");     
+alert(" Sukses ! Data berhasil Di Ubah!"); 
+location.replace('/sibiko/_admin/?page=admin&action=data_siswa')    
 </script>
 <?php 
 

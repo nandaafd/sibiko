@@ -107,7 +107,7 @@
                       <div class="col-lg-12"> 
                       <div class="form-group">
                         <label>Photo</label>
-                          <input type="file" name="photo" size="30"/>
+                          <input type="file" class="form-control" name="photo" />
                       </div>
                   </div>
 
