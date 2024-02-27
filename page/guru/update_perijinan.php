@@ -1,7 +1,7 @@
 <div class="row">
 <!--  page header -->
 <div class="col-lg-12">
-<h1 class="page-header"><i class="fa fa-home"></i> <b>Home</b> <i class="fa fa-angle-right"></i> <font color="#f50057">Update Data Diri</font></h1>
+<h1 class="page-header"><i class="fa fa-home"></i> <b>Home</b> <i class="fa fa-angle-right"></i> <font color="#f50057">Update Data Perijinan</font></h1>
 </div>
 <!-- end  page header -->
 
@@ -15,7 +15,7 @@ $data = mysqli_fetch_array($sql_formulir);
 ?>
 <div class="panel panel-default" style="margin:20px 20px;">
 <div class="panel-heading">
-        <b><i class="fa fa-table"></i> EDIT DATA PERIZINAN</b>
+        <b><i class="fa fa-table"></i> EDIT DATA PERIJINAN</b>
 </div>
     <div class="table-responsive">                    
 <div class="panel-body">

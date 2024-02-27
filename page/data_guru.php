@@ -24,12 +24,8 @@
                                             <th>No</th>
                                             <th>Nip</th>
                                             <th>Nama</th>
-                                            <th>TTL</th>
-                                            <th>Gender</th>
-                                            <th>Agama</th>
-                                            <th>Alamat</th>
+                                            <th style="width: 25%;">Alamat</th>
                                             <th>Telp</th>
-                                            <th>Email</th>
                                             <th>Foto</th>
                                             <th>Action</th>
                                         </tr>
@@ -45,22 +41,28 @@
                                             <td><?php echo $no++; ?></td>
                                             <td><?php echo $data['nip']; ?></td>
                                             <td><?php echo $data['nama_guru']; ?>, <?php echo $data['gelar']; ?></td>
-                                            <td><?php echo $data['tempat_lahir']; ?>,<?php echo $data['tanggal_lahir']; ?></td>
-                                            <td><?php echo $data['kelamin']; ?></td>
-                                            <td><?php echo $data['agama']; ?></td>
                                             <td><?php echo $data['alamat_guru']; ?></td>
                                             <td><?php echo $data['telpon_guru']; ?></td>
-                                            <td><?php echo $data['email']; ?></td>
-                                            <td> <img src="../photo_guru/<?php echo $data ['photo'];?>" height="40" width="40" align="middle" style="border-radius: 100%;"></td>
+                                            <td> 
+                                                
+                                                <?php 
+                                                    if ($data['photo'] != null) {
+                                                ?>
+                                                <img src="../photo_guru/<?php echo $data ['photo'];?>" onerror="this.src='../photo_guru/nopic.jpg'" height="40" width="40" align="middle" style="border-radius: 100%;">
+                                                <?php
+                                                    }else {
+                                                ?>
+                                                <img src="../photo_guru/nopic.jpg" onerror="this.src='../photo_guru/nopic.jpg'" height="40" width="40" align="middle" style="border-radius: 100%;">
+                                                <?php
+                                                    }
+                                                ?>
+                                            </td>
                                             <td>
-<a href="" data-toggle="modal" data-target="#edit<?php echo $data['id_guru'];?>">
-<button type="" class="btn btn-info"><i class="fa fa-pencil"></i></button></a>
-
-<a onclick="return confirm('Yakin ingin hapus data ini ??')" href="?page=admin&action=del_guru&kdgr=<?php echo $data['id_guru']; ?>">
-<button type="" class="btn btn-danger"><i class="fa fa-times"></i></button></a>
-
-
-
+                                                <div class="btn-group">
+                                                    <a href="" data-toggle="modal" class="btn btn-info" data-target="#edit<?php echo $data['id_guru'];?>"><i class="fa fa-pencil"></i></a>
+                                                    <a onclick="return confirm('Yakin ingin hapus data ini ??')" class="btn btn-danger" href="?page=admin&action=del_guru&kdgr=<?php echo $data['id_guru']; ?>"><i class="fa fa-times"></i></a>
+                                                    <a href="?page=guru&action=detail&kdguru=<?php echo $data['id_guru']; ?> "><button type="" class="btn btn-success"><i class="fa fa-search"></i></button></a>
+                                                </div>
 
 <!--- Modal EDIT-->
 <div class="modal fade" id="edit<?php echo $data['id_guru'];?>" tabindex="-1" role="dialog">

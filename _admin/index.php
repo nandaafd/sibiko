@@ -251,40 +251,30 @@ $data = mysqli_fetch_array($sql);
         	}elseif ($page=="guru") {
         		if ($action=="") {
                     include '../page/gr_pembimbing.php';
-                    # code...
                 }elseif ($action=="kelas") {
                      include '../page/data_kelas.php';
-                    # code...
+                }elseif ($action=="detail") {
+                    include '../page/guru/detail_guru.php';
                 }elseif ($action=="delkelas") {
                      include '../page/del_kelas.php';
-                    # code...
                 }elseif ($action=="delpem") {
                      include '../page/del_pemb.php';
-                    # code...sanksi
                 }elseif ($action=="pelanggaran") {
                      include '../page/pelanggaran.php';
-                    # code...
                 }elseif ($action=="sanksi") {
                      include '../page/sanksi.php';
-                    # code...
                 }elseif ($action=="del_pel") {
                      include '../page/del_pel.php';
-                    # code...
                 }elseif ($action=="del_sanksi") {
                      include '../page/del_sanksi.php';
-                    # code...
                 }elseif ($action=="view_sos") {
                      include '../page/view_sosiometri.php';
-                    # code...
                 }elseif ($action=="view_sosid") {
                      include '../page/detail_sosiometri.php';
-                    # code...
                 }
-        		# code...
         	}elseif ($page=="laporan") {
                 if ($action=="") {
                     include '../Laporan/laporan_siswa.php';
-                    # code...
                 }elseif ($action=="print_id") {
                     include '../Laporan/detail_siswa.php';
                 }elseif ($action=="laporan_guru") {
@@ -295,11 +285,9 @@ $data = mysqli_fetch_array($sql);
                 elseif ($action=="lap_perijinan") {
                     include '../Laporan/laporan_perijinan.php';
                 }
-                # code...
             }elseif ($page=="grafik") {
                 if ($action=="") {
                     include '../grafik/grafik_sosiometri.php';
-                    # code...
                 }elseif ($action=="chart") {
                     include '../grafik/chart_goggle.php';
                 }elseif ($action=="pie") {
@@ -307,10 +295,8 @@ $data = mysqli_fetch_array($sql);
                 }elseif ($action=="lap_pel") {
                     include '../Laporan/laporan_pelanggaran.php';
                 }
-                # code...
             }elseif ($page=="") {
                 include'../page/home.php';
-                # code...
             }else{
                 echo "Data Tidak Ditemukan !!";
             }

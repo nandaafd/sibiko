@@ -7,8 +7,20 @@
             </div>            
 
 <div class="alert alert-success alert-dismissable">
-<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> <img src="../photo_guru/<?php echo $data ['photo'];?>" height="40" width="40" align="middle" style="border-radius: 100%;"> Haii ..
-<b style="color: red;"><?php echo $data ['nama_lengkap']; ?></b> Anda Login pada <a href="#" class="alert-link"><b><?php echo date (" d F Y") ?></b></a>.
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> 
+    <?php 
+        if ($data['photo'] != null) {
+    ?>
+        <img src="../photo_guru/<?php echo $data ['photo'];?>" onerror="this.src='../photo_guru/nopic.jpg'" height="40" width="40" align="middle" style="border-radius: 100%;"> 
+    <?php
+        }else {
+    ?>
+        <img src="../photo_guru/nopic.jpg" onerror="this.src='../photo_guru/nopic.jpg'" height="40" width="40" align="middle" style="border-radius: 100%;"> 
+    <?php
+        }
+    ?>
+    Haii ..
+    <b style="color: red;"><?php echo $data ['nama_lengkap']; ?></b> Anda Login pada <a href="#" class="alert-link"><b><?php echo date (" d F Y") ?></b></a>.
 </div>
 <?php
 include '../koneksi/-koneksi.php';

@@ -11,7 +11,7 @@
 	<!-- Advanced Tables -->
     <div class="panel panel-default">
         <div class="panel-heading" style="background-color:#f50057;color: white;">
-        <b><i class="fa fa-table"></i> DAFTAR DATA PERIZINAN SISWA </b>
+        <b><i class="fa fa-table"></i> DAFTAR DATA PERIJINAN SISWA </b>
         </div>
         <div class="panel-body">
             <div class="table-responsive">

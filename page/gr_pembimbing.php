@@ -20,8 +20,8 @@
 <option> -Pilih Guru-</option>
 <?php 
 include '../koneksi/-koneksi.php';
-$nama_guru = mysql_query("SELECT nama_guru FROM data_guru");
-while($hasil = mysql_fetch_array($nama_guru)){
+$nama_guru = mysqli_query($mysqli,"SELECT nama_guru FROM data_guru");
+while($hasil = mysqli_fetch_array($nama_guru)){
 echo "<option>$hasil[nama_guru]</option>";
 }
 ?>
@@ -32,8 +32,8 @@ echo "<option>$hasil[nama_guru]</option>";
 <option>-Pilih Siswa-</option>
 <?php 
 include '../koneksi/-koneksi.php';
-$nama_siswa = mysql_query("SELECT nama_siswa FROM data_siswa");
-while($hasil = mysql_fetch_array($nama_siswa)){
+$nama_siswa = mysqli_query($mysqli,"SELECT nama_siswa FROM data_siswa");
+while($hasil = mysqli_fetch_array($nama_siswa)){
 echo "<option>$hasil[nama_siswa]</option>";
 }
 ?>
@@ -45,8 +45,8 @@ echo "<option>$hasil[nama_siswa]</option>";
 
 <?php 
 include '../koneksi/-koneksi.php';
-$nama_kelas = mysql_query("SELECT nama_kelas FROM setup_kelas");
-while($hasil = mysql_fetch_array($nama_kelas)){
+$nama_kelas = mysqli_query($mysqli,"SELECT nama_kelas FROM setup_kelas");
+while($hasil = mysqli_fetch_array($nama_kelas)){
 echo "<option>$hasil[nama_kelas]</option>";
 }
 ?>
@@ -72,7 +72,7 @@ alert("Oops...", "Inputan tidak boleh kosong !!:(", "error");
 <?php
 
 }else{
-mysql_query("INSERT INTO setup_pembimbing VALUES ('id_kelas','$nama_guru','$nama_siswa','$nama_kelas')") or die(mysql_error());
+mysqli_query($mysqli,"INSERT INTO setup_pembimbing VALUES ('id_kelas','$nama_guru','$nama_siswa','$nama_kelas')") or die(mysqli_error($mysqli));
 ?>
 
 <script type="text/javascript">
@@ -115,9 +115,9 @@ alert(" Sukses !", "Data berhasil disimpan!", "success");
                                     <tbody>
                                             <?php
                                         include '../koneksi/-koneksi.php';
-                                        $sql = mysql_query("select * from setup_pembimbing") or die (mysql_error());
+                                        $sql = mysqli_query($mysqli,"select * from setup_pembimbing") or die (mysqli_error($mysqli));
                                         $no=1;
-                                        while ($data = mysql_fetch_array($sql)){
+                                        while ($data = mysqli_fetch_array($sql)){
                                         ?>
                                         <tr>
                                             <td><?php echo $no++; ?></td>

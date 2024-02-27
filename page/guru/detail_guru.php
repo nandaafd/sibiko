@@ -7,11 +7,9 @@
 
 
 <?php
-if (@$_SESSION['guru']) {
-$sesi = @$_SESSION['guru'];
-}
+$kdgr = @$_GET['kdguru'];
 
-$sql_formulir = mysqli_query($mysqli, "select * from data_guru where id_guru = '$sesi'") or die(mysqli_error($mysqli));
+$sql_formulir = mysqli_query($mysqli, "select * from data_guru where id_guru = '$kdgr'") or die(mysqli_error($mysqli));
 $data = mysqli_fetch_array($sql_formulir);
 ?>
 <div class="row">
@@ -27,7 +25,17 @@ $data = mysqli_fetch_array($sql_formulir);
             	   <tr>
                         <th><b style="color: red;"> DATA PRIBADI</b></th>
                         <th></th>
-                        <th><img src="../photo_guru/<?php echo $data ['photo'];?>" height="80" width="80" align="middle" style="border-radius: 100%;"></th>
+                        <?php 
+                            if ($data['photo'] != null) {
+                        ?>
+                            <th><img src="../photo_guru/<?php echo $data['photo'];?>" onerror="this.src='../photo_guru/nopic.jpg'" height="80" width="80" align="middle" style="border-radius: 100%;"></th>
+                        <?php
+                            }else {
+                        ?>
+                            <th><img src="../photo_guru/nopic.jpg" height="80" onerror="this.src='../photo_guru/nopic.jpg'" width="80" align="middle" style="border-radius: 100%;"></th>
+                        <?php
+                            }
+                        ?>
                         <th></th>
                         <th></th>
                         <th> <a href="../Laporan/detail_guru.php?kdsis=<?php echo $data['id_guru']; ?> "><button type="" class="btn btn-info"><i class="fa fa-print"></i> Print</button></a></th>

@@ -63,7 +63,19 @@
                         <td><?php echo $data['alamat_guru']; ?></td>
                         <td><?php echo $data['telpon_guru']; ?></td>
                         <td><?php echo $data['email']; ?></td>
-                        <td> <img src="../photo_guru/<?php echo $data ['photo'];?>" height="40" width="40" align="middle" style="border-radius: 100%;"></td>
+                        <td> 
+                            <?php 
+                                if ($data['photo'] != null) {
+                            ?>
+                            <img src="../photo_guru/<?php echo $data['photo'];?>" onerror="this.src='../photo_guru/nopic.jpg'" height="40" width="40" align="middle" style="border-radius: 100%;">
+                            <?php
+                                }else {
+                            ?>
+                            <img src="../photo_guru/nopic.jpg" onerror="this.src='../photo_guru/nopic.jpg'" height="40" width="40" align="middle" style="border-radius: 100%;">
+                            <?php
+                                }
+                            ?>
+                        </td>
                         <td>
                               <a href="../Laporan/detail_guru.php?kdsis=<?php echo $data['id_guru']; ?> "><button type="" class="btn btn-info"><i class="fa fa-print"></i> Print</button></a> 
                             

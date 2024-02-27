@@ -10,7 +10,7 @@
                     <!-- Advanced Tables -->
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                             <b><i class="fa fa-table"></i> HIMPUNAN DATA SISWA</b>
+                             <b><i class="fa fa-table"></i> HIMPUNAN DATA PERIJINAN SISWA</b>
                         </div>
                            <div class="table-responsive">                    
                         <div class="panel-body">
@@ -53,7 +53,7 @@
                                             <div class="modal-dialog modal-lg" role="document">
                                                 <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h5 class="modal-title"><i class="fa fa-edit"></i> Edit Data Perizian</h5>
+                                                    <h5 class="modal-title"><i class="fa fa-edit"></i> Edit Data Perijinan</h5>
                                                 </div>
                                                 <form action="" method="post">
                                                 <div class="modal-body">
@@ -101,7 +101,6 @@
                                                     
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
                                                     <input type="submit" name="update" class="btn btn-info" value="UPDATE">
                                                 </div>
                                                 </form>

@@ -25,11 +25,8 @@
                                             <th>NIS</th>
                                             <th>Nama</th>
                                             <th>TTL</th>
-                                            <th>Gender</th>
-                                            <th>Agama</th>
                                             <th>Alamat</th>
                                             <th>Telp</th>
-                                            <th>Email</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -45,15 +42,12 @@
                                             <td><a style=" color: red;" href="?page=siswa&action=detail&kdsis=<?php echo $data['id_siswa']; ?>"><?php echo $data['nis']; ?> </a></td>
                                             <td><?php echo $data['nama_siswa']; ?></td>
                                             <td><?php echo $data['tpl']; ?>,<?php echo $data['tgl']; ?></td>
-                                            <td><?php echo $data['kelamin']; ?></td>
-                                            <td><?php echo $data['agama']; ?></td>
                                             <td><?php echo $data['alamat_siswa']; ?></td>
                                             <td><?php echo $data['telpon_siswa']; ?></td>
-                                            <td><?php echo $data['email']; ?></td>
                                             <td>
-                                            <a href="?page=siswa&action=detail&kdsis=<?php echo $data['id_siswa']; ?> "><button type="" class="btn btn-success"><i class="fa fa-search"></i></button></a>
-                                            <a href="?page=siswa&action=edit&kdsis=<?php echo $data['id_siswa']; ?> "><button type="" class="btn btn-info"><i class="fa fa-edit"></i></button></a>
-                                            <a href="?page=siswa&action=del&kdsis=<?php echo $data['id_siswa']; ?> "><button type="" class="btn btn-danger"><i class="fa fa-times"></i></button></a>                                                
+                                                <a href="?page=siswa&action=detail&kdsis=<?php echo $data['id_siswa']; ?> "><button type="" class="btn btn-success"><i class="fa fa-search"></i></button></a>
+                                                <a href="?page=siswa&action=edit&kdsis=<?php echo $data['id_siswa']; ?> "><button type="" class="btn btn-info"><i class="fa fa-edit"></i></button></a>
+                                                <a href="?page=siswa&action=del&kdsis=<?php echo $data['id_siswa']; ?> "><button type="" class="btn btn-danger"><i class="fa fa-times"></i></button></a>                                                
                                             </td>
                                         </tr>
                                         <?php } ?>

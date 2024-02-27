@@ -27,7 +27,7 @@
           <form action="" method="post" enctype="multipart/form-data">
               <div class="mb-3">
                   <input type="hidden" name="no" class="form-control"/>
-                  <label for="exampleInputEmail1" class="form-label">Pemberi Izin</label>
+                  <label for="exampleInputEmail1" class="form-label">Pemberi Ijin</label>
                   <input type="text" class="form-control" name="p_ijin">
               </div>
               <br/>
