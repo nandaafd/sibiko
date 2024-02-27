@@ -28,7 +28,7 @@
                                         <div class="header">
                                             <strong class="primary-font"><?php echo $data['nama']; ?> </strong>
                                             <small class="pull-right text-muted">
-                                                <i class="fa fa-clock-o fa-fw"></i> <?php echo $data['tanggal']; ?> &nbsp; &nbsp;&nbsp;&nbsp; <a href="?page=admin&action=delpes&kdpes=<?php echo $data['id']; ?> " title=""> <button type="" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> </button></a>
+                                                <i class="fa fa-clock-o fa-fw"></i> <?php echo $data['tanggal'];?> &nbsp; &nbsp;&nbsp;&nbsp; <a href="?page=admin&action=delpes&kdpes=<?php echo $data['no'];?>"> <button type="" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> </button></a>
                                             </small>
                                         </div>
                                         <p>

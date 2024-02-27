@@ -7,5 +7,5 @@ mysqli_query($mysqli,"delete from tb_izin where no = '$id'") or die(mysqli_error
 ?>
  <script type="text/javascript">
         alert(" Sukses !", "Data berhasil di hapus!", "success") 
-        window.location.hrmef="?page=guru&action=view_perijinan";       
+        window.location.href="?page=guru&action=view_perijinan";       
  </script>

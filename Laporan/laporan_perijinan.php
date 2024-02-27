@@ -1,7 +1,7 @@
 <div class="row">
 <!--  page header -->
 <div class="col-lg-12">
-<h1 class="page-header"><i class="fa fa-home"></i> <b>Home</b> <i class="fa fa-angle-right"></i> <font color="#f50057"> Laporan Data Pelanggaran</font></h1>
+<h1 class="page-header"><i class="fa fa-home"></i> <b>Home</b> <i class="fa fa-angle-right"></i> <font color="#f50057"> Laporan Data Perijinan</font></h1>
 </div>
 <!-- end  page header -->
 
@@ -46,7 +46,7 @@
                             <td><?php echo $data['untuk']; ?></td>
                             <td><?php echo $data['alasan']; ?></td>
                             <td>
-                                <a href="../Laporan/detail_guru.php?kdsis=<?php echo $data['no']; ?> "><button type="" class="btn btn-info"><i class="fa fa-print"></i> Print</button></a> 
+                                <a href="../Laporan/detail_izin_siswa.php?kdsis=<?php echo $data['no']; ?> "><button type="" class="btn btn-info"><i class="fa fa-print"></i> Print</button></a> 
                             </td>
                         </tr>
                         <?php } ?> 
@@ -54,8 +54,8 @@
                 </table>
             </div>
         <center>
-        <a class="btn btn-danger" href="../Laporan/data_pelanggaran.php" style="font-size: 20px;"><i class="fa fa-print" style="font-size: 25px;"></i> Live Print</a>
-        <a class="btn btn-success" href="../Laporan/data_pelanggaranex.php" style="font-size: 20px;"><i class="fa fa-print" style="font-size: 25px;"></i> Export Excell</a>
+        <a class="btn btn-danger" href="../Laporan/data_perijinan.php" style="font-size: 20px;"><i class="fa fa-print" style="font-size: 25px;"></i> Live Print</a>
+        <a class="btn btn-success" href="../Laporan/data_perijinanex.php" style="font-size: 20px;"><i class="fa fa-print" style="font-size: 25px;"></i> Export Excell</a>
         </center>
             
         </div>

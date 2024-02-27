@@ -61,9 +61,6 @@
                 </div>
 
         </div>
-        <div class="panel-footer" style="background-color: #f50057; color:white;">
-            Panel Footer
-        </div>
     </div>
 
 </div>

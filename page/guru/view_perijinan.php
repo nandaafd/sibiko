@@ -14,8 +14,8 @@
         <b><i class="fa fa-table"></i> DAFTAR DATA PERIZINAN SISWA </b>
         </div>
         <div class="panel-body">
-        	 <br>
             <div class="table-responsive">
+        	<a href="?page=guru&action=add_perijinan" class="btn btn-info">Tambah Perijinan Baru</a>  <br>
                 <table class="table table-striped table-hover" id="dataTables-example">
                     <thead>
                          <tr>
@@ -46,6 +46,7 @@
                             <td><?php echo $data['untuk']; ?></td>
                             <td><?php echo $data['alasan']; ?></td>
                             <td>
+                                <a href="?page=guru&action=update_perijinan&no=<?php echo $data['no']; ?>" class="btn btn-info"><i class="fa fa-pencil"></i></a>
 								<a onclick="return confirm('Yakin ingin hapus data ini ??')" href="?page=guru&action=del_perijinan&kdgr=<?php echo $data['no']; ?>">
 								<button type="" class="btn btn-danger" style="background-color:#f50057;"><i class="fa fa-times"></i></button></a>
                             </td>
@@ -58,7 +59,11 @@
         </div>
     </div>
     <!--End Advanced Tables -->
-    
+
 </div>
 </div>
+
+
+
+
 

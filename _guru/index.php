@@ -16,7 +16,6 @@ if (@$_SESSION['guru']) {
     <link href="../assets/plugins/pace/pace-theme-big-counter.css" rel="stylesheet" />
     <link href="../assets/css/style.css" rel="stylesheet" />
       <link href="../assets/css/main-style.css" rel="stylesheet" />
-
     <link href="../assets/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
         <!-- CUSTOM STYLES -->
     <link href="../assets/plugins/morris/morris-0.4.3.min.css" rel="stylesheet" />
@@ -119,10 +118,7 @@ $data = mysqli_fetch_array($sql);
                         <a href="?page=guru&action=viewjen" style="font-size: 15px;"> <i class="fa fa-table fa-fw"></i>+ Jenis Sanksi</a>
                     
                     </li>     
-                    <li>
-                        <a href="?page=guru&action=viewjen" style="font-size: 15px;"> <i class="fa fa-table fa-fw"></i>+ Perizinan Siswa</a>
-                        <!-- second-level-items -->
-                    </li>                     
+                    
                         </ul>
                         <!-- second-level-items -->
                     </li> 
@@ -136,7 +132,7 @@ $data = mysqli_fetch_array($sql);
                                 <a href="?page=guru&action=sos" style="font-size: 15px;"><i class="fa fa-edit"></i> Data Sosiometri</a>
                             </li>  
                             <li>
-                                <a href="?page=guru&action=view_perijinan" style="font-size: 15px;"><i class="fa fa-edit"></i> Data Izin Siswa</a>
+                                <a href="?page=guru&action=view_perijinan" style="font-size: 15px;"><i class="fa fa-edit"></i> Data Perijinan</a>
                             </li> 
                               <li>
                                 <a href="?page=guru&action=view_guru" style="font-size: 15px;"><i class="fa fa-edit"></i> Data Guru</a>
@@ -183,8 +179,12 @@ $data = mysqli_fetch_array($sql);
         			include '../page/guru/view_pelanggaran.php';
                 }elseif ($action=="view_perijinan") {
         			include '../page/guru/view_perijinan.php';
+                }elseif ($action=="add_perijinan") {
+        			include '../page/guru/tambah_perijinan.php';
         		}elseif ($action=="del_perijinan") {
         			include '../page/guru/del_perijinan.php';
+                }elseif ($action=="update_perijinan") {
+        			include '../page/guru/update_perijinan.php';
         		}elseif ($action=="viewjen") {
                     include '../page/guru/sanksi.php';
                 }elseif ($action=="del_pel") {

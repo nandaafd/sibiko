@@ -123,6 +123,9 @@ $data = mysqli_fetch_array($sql);
                             <li>
                                 <a href="?page=admin" style="font-size: 15px;"> <i class="fa fa-list-alt"></i></i> Data Guru</a>
                             </li> 
+                            <li>
+                                <a href="?page=admin&action=data_perijinan" style="font-size: 15px;"> <i class="fa fa-list-alt"></i></i> Data Perizinan Siswa</a>
+                            </li>
                              <li>
                                 <a href="?page=guru&action=view_sos" style="font-size: 15px;"> <i class="fa fa-list-alt"></i></i> Data Sosiometri</a>
                             </li> 
@@ -179,7 +182,9 @@ $data = mysqli_fetch_array($sql);
                              <li>
                                 <a href="?page=laporan&action=lap_pel" style="font-size: 15px;"> <i class="fa fa-file"></i> Laporan Pelanggaran</a>
                             </li>
-                          
+                            <li>
+                                <a href="?page=laporan&action=lap_perijinan" style="font-size: 15px;"> <i class="fa fa-file"></i> Laporan Perijinan</a>
+                            </li>
                         </ul>
                         <!-- second-level-items -->
                     </li>                   
@@ -203,8 +208,12 @@ $data = mysqli_fetch_array($sql);
         			# code...
         		}elseif ($action=="data_siswa") {
         			include '../page/data_siswa.php';
+                }elseif ($action=="data_perijinan") {
+        			include '../page/data_perijinan.php';
         		}elseif ($action=="del_guru") {
         			include '../page/del_guru.php';
+                }elseif ($action=="del_perijinan") {
+        			include '../page/del_perijinan.php';
         		}elseif ($action=="input_sis") {
                     include '../page/input_siswa.php';
                 }elseif ($action=="addguru") {
@@ -282,6 +291,9 @@ $data = mysqli_fetch_array($sql);
                     include '../Laporan/laporan_guru.php';
                 }elseif ($action=="lap_pel") {
                     include '../Laporan/laporan_pelanggaran.php';
+                }
+                elseif ($action=="lap_perijinan") {
+                    include '../Laporan/laporan_perijinan.php';
                 }
                 # code...
             }elseif ($page=="grafik") {

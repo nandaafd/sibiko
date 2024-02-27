@@ -187,8 +187,8 @@
     WHERE id_guru='$id_guru'") or die(mysqli_error($mysqli));
           ?>
 <script>
-alert(" Sukses !.. Data berhasil Di Ubah!")
-window.location.href="?page=admin";     
+    alert(" Sukses !.. Data berhasil Di Ubah!")
+    window.location.href="?page=admin";     
 </script>
 <?php 
 }

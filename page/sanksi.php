@@ -42,7 +42,7 @@ alert("Oops...", "Inputan tidak boleh kosong !!:(", "error");
 <?php
 
 }else{
-mysql_query("INSERT INTO setup_jenis_sanksi VALUES ('id_sanksi','$nama_sanksi')") or die(mysql_error());
+mysqli_query($mysqli,"INSERT INTO setup_jenis_sanksi VALUES ('id_sanksi','$nama_sanksi')") or die(mysqli_error($mysqli));
 ?>
 
 <script type="text/javascript">
@@ -80,9 +80,9 @@ alert(" Sukses !", "Data berhasil disimpan!", "success");
                                     <tbody>
                                             <?php
                                         include '../koneksi/-koneksi.php';
-                                        $sql = mysql_query("select * from setup_jenis_sanksi") or die (mysql_error());
+                                        $sql = mysqli_query($mysqli,"select * from setup_jenis_sanksi") or die (mysqli_error($mysqli));
                                         $no=1;
-                                        while ($data = mysql_fetch_array($sql)){
+                                        while ($data = mysqli_fetch_array($sql)){
                                         ?>
                                         <tr>
                                             <td><?php echo $no++; ?></td>
